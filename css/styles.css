@@ -1,0 +1,105 @@
+/* Paleta de colores */
+:root{
+  --background: #F3F5FC;
+  --dark-blue: #0A3871;
+  --text-blue: #495057;
+  --text-gray: #343A40;
+  --soft-gray: #D8DFE8;
+  --white: #ffffff;
+}
+/* Tamaño de texto en rem */
+html{
+  font-size: 62.5%;
+}
+body{
+  background: var(--background);
+  font-size: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 150%;
+}
+.logo{
+  padding: 1.6rem 2rem;
+  height: 6rem;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
+  gap: 3rem;
+}
+.input-section, .output-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+.input-text, .output-text{
+  width: 100%;
+  height: 36rem;
+  border-radius: 1.6rem;
+  padding: 3rem;
+}
+.input-text{
+  border: none;
+  color: var(--dark-blue);
+}
+::placeholder{color: var(--dark-blue);}
+.input-text:focus{
+  outline: none;
+}
+.output-text{
+  background: var(--white);
+  background-image: url(/assets/Muñeco.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  border: none;
+  color: var(--dark-blue);
+}
+.output-text:focus{
+  outline: none;
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.encrypt-btn, .decrypt-btn, .copy-btn{
+  width: 12rem;
+  height: 3rem;
+  border-radius: 1.6rem;
+}
+.encrypt-btn{
+  background-color: var(--dark-blue);
+  border: 0.1rem solid var(--dark-blue);
+  color: var(--white);
+}
+.decrypt-btn{
+  background-color: var(--soft-gray);
+  border: 0.1rem solid var(--dark-blue);
+  color: var(--dark-blue);
+}
+.info{
+  color: var(--text-blue);
+  font-size: 1.2rem;
+}
+.copy-btn{
+  border: 0.1rem solid var(--dark-blue);
+  color: var(--dark-blue);
+  margin-top: 1.9rem;
+}
+
+@media screen and (min-width: 768px) {
+  main{
+    flex-direction: row;
+    padding: 0 5rem;
+  }
+  .input-section{
+    flex: 2;
+  }
+  .output-section{
+    flex: 1;
+  }
+}
