@@ -51,7 +51,7 @@ main{
 }
 .output-text{
   background: var(--white);
-  background-image: url(../assets/Muñeco.png);
+  background-image: url(assets/Muñeco.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
