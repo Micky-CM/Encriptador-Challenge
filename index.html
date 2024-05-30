@@ -20,19 +20,19 @@
         <textarea class="input-text" id="input-text" placeholder="Ingrese el texto aquí"></textarea>
         <p class="info">Solo letras minúsculas y sin acentos</p>
         <div class="buttons">
-            <button class="encrypt-btn">Encriptar</button>
-            <button class ="decrypt-btn">Desencriptar</button>
+            <button class="encrypt-btn" onclick="btnEncrypt()">Encriptar</button>
+            <button class ="decrypt-btn" onclick="btnDecrypt()">Desencriptar</button>
         </div>
     </section>
     <!-- Sección de salida -->
     <section id="output-section">
         <textarea class="output-text" id="output-text"></textarea>
         <div class="buttons">
-          <button class="copy-btn">Copiar</button>
+          <button class="copy-btn" onclick="copy()">Copiar</button>
         </div>
     </section>
 </main>
   <footer></footer>
-  <script src="main.js"></script>
+  <script src="scritp.js"></script>
 </body>
 </html>
