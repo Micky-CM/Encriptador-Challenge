@@ -2,10 +2,10 @@
 :root{
   --background: #F3F5FC;
   --dark-blue: #0A3871;
-  --text-blue: #495057;
-  --text-gray: #343A40;
+  --gray: #343A40;
   --soft-gray: #D8DFE8;
   --white: #ffffff;
+  --footer-blue: #072B61;
 }
 /* Tamaño de texto en rem */
 html{
@@ -63,10 +63,9 @@ main{
 }
 .buttons{
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-evenly;
 }
-.encrypt-btn, .decrypt-btn, .copy-btn{
+.btn{
   width: 12rem;
   height: 3rem;
   border-radius: 1.6rem;
@@ -82,7 +81,16 @@ main{
   color: var(--dark-blue);
 }
 .info{
-  color: var(--text-blue);
+  display: flex;
+  align-items: center;
+}
+.info__icon{
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.4rem;
+}
+.info__text{
+  color: var(--gray);
   font-size: 1.2rem;
 }
 .copy-btn{
@@ -90,8 +98,35 @@ main{
   color: var(--dark-blue);
   margin-top: 1.9rem;
 }
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--footer-blue);
+  height: auto;
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.footer__info{
+  color: var(--white);
+  font-weight: 600;
+  font-style: italic;
+}
+.footer__media{
+  display: flex;
+  gap: 1.4rem;
+}
+.footer__icon{
+  width: 3rem;
+  height: 3rem;
+  background: var(--white);
+  border: 0.1rem solid var(--white);
+  border-radius: 0.8rem;
+}
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
   main{
     flex-direction: row;
     padding: 0 5rem;
@@ -101,5 +136,21 @@ main{
   }
   .output-section{
     flex: 1;
+  }
+  .btn{
+    width: 16rem;
+    height: 4rem;
+    font-size: 2rem;
+  }
+  .btn:hover{
+    scale: 1.2;
+  }
+  footer{
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2rem 3rem;
+  }
+  .footer__icon:hover{
+    scale: 1.1;
   }
 }

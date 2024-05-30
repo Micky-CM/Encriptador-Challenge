@@ -18,21 +18,31 @@
     <!-- Sección de entrada -->
     <section class="input-section">
         <textarea class="input-text" id="input-text" placeholder="Ingrese el texto aquí"></textarea>
-        <p class="info">Solo letras minúsculas y sin acentos</p>
+        <div class="info">
+          <img class="info__icon" src="/assets/bi_exclamation-circle-fill.png" alt="Ícono de advertencia">
+          <p class="info__text">Solo letras minúsculas y sin acentos</p>
+        </div>
         <div class="buttons">
-            <button class="encrypt-btn" onclick="btnEncrypt()">Encriptar</button>
-            <button class ="decrypt-btn" onclick="btnDecrypt()">Desencriptar</button>
+            <button class="encrypt-btn btn" onclick="btnEncrypt()">Encriptar</button>
+            <button class ="decrypt-btn btn" onclick="btnDecrypt()">Desencriptar</button>
         </div>
     </section>
     <!-- Sección de salida -->
     <section id="output-section">
         <textarea class="output-text" id="output-text"></textarea>
         <div class="buttons">
-          <button class="copy-btn" onclick="copy()">Copiar</button>
+          <button class="copy-btn btn" onclick="copy()">Copiar</button>
         </div>
     </section>
 </main>
-  <footer></footer>
+  <footer>
+    <p class="footer__info">Desarrollado por <strong>Carlos Miguel</strong></p>
+    <ul class="footer__media">
+      <li><a href="https://github.com/Micky-CM"><img class="footer__icon" src="/assets/icons/github.png" alt="Ícono de GitHub"></a></li>
+      <li><a href="https://www.linkedin.com/in/miguel-colque/"><img class="footer__icon" src="/assets/icons/linkedin.png" alt="Ícono de LinkedIn"></a></li>
+      <li><a href="https://x.com/micky_shark"><img class="footer__icon" src="/assets/icons/x-media.png" alt="Ícono de X"></a></li>
+    </ul>
+  </footer>
   <script src="scritp.js"></script>
 </body>
 </html>
